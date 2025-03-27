@@ -1,3 +1,5 @@
+const extractedNumbers = [];
+
 function tableMaker() {
   const tableBlock = document.getElementById("table-block");
 
@@ -12,7 +14,17 @@ function tableMaker() {
 }
 
 function getNum() {
-  const numRandom = Math.floor(Math.random() * 90 + 1);
+  if (extractedNumbers.length === 90) {
+    alert("Hai estratto tutti i numeri!");
+    return;
+  }
+
+  let numRandom;
+  do {
+    numRandom = Math.floor(Math.random() * 90 + 1);
+  } while (extractedNumbers.includes(numRandom));
+
+  extractedNumbers.push(numRandom);
   getCell(numRandom);
 }
 
@@ -23,9 +35,6 @@ function getCell(num) {
     if (parseInt(tDivs[i].dataset.numero) === num) {
       tDivs[i].classList.add("inEvidenza");
     }
-  }
-  if (tDivs[num].classList.contains("inEvidenza")) {
-    getNum();
   }
 }
 
