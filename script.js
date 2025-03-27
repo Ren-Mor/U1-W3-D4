@@ -1,4 +1,4 @@
-const extractedNumbers = [];
+const appNums = [];
 
 function tableMaker() {
   const tableBlock = document.getElementById("table-block");
@@ -14,7 +14,7 @@ function tableMaker() {
 }
 
 function getNum() {
-  if (extractedNumbers.length === 90) {
+  if (appNums.length === 90) {
     alert("Hai estratto tutti i numeri!");
     return;
   }
@@ -22,9 +22,9 @@ function getNum() {
   let numRandom;
   do {
     numRandom = Math.floor(Math.random() * 90 + 1);
-  } while (extractedNumbers.includes(numRandom));
+  } while (appNums.includes(numRandom));
 
-  extractedNumbers.push(numRandom);
+  appNums.push(numRandom);
   getCell(numRandom);
 }
 
