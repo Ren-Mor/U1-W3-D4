@@ -1,4 +1,5 @@
 const appNums = [];
+let availableNumbers = Array.from({ length: 90 }, (_, i) => i + 1);
 
 function tableMaker() {
   const tableBlock = document.getElementById("table-block");
@@ -6,22 +7,20 @@ function tableMaker() {
   for (let i = 1; i <= 90; i++) {
     const tD = document.createElement("div");
     tD.classList.add("cells");
-    tD.textContent = i; // Il numero è memorizzato direttamente come contenuto della cella
+    tD.textContent = i;
 
     tableBlock.appendChild(tD);
   }
 }
 
 function getNum() {
-  if (appNums.length === 90) {
+  if (availableNumbers.length === 0) {
     alert("Hai estratto tutti i numeri!");
     return;
   }
 
-  let numRandom;
-  do {
-    numRandom = Math.floor(Math.random() * 90 + 1);
-  } while (appNums.includes(numRandom));
+  const randomIndex = Math.floor(Math.random() * availableNumbers.length);
+  const numRandom = availableNumbers.splice(randomIndex, 1)[0];
 
   appNums.push(numRandom);
   getCell(numRandom);
