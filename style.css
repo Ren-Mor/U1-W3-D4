@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   background-image: url(assets/Bingo.avif);
   background-size: cover;
@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-  color: rgb(122, 77, 28);
+  color: gray;
   font-size: 3em;
 }
 
@@ -31,14 +31,14 @@ h1 {
 }
 
 .inEvidenza {
-  background-color: #ca361c;
+  background-color: gray;
   color: white;
 }
 
 #extraction-button {
   padding: 15px 25px;
   font-size: 1.2em;
-  background-color: #ca361c;
+  background-color: gray;
   color: white;
   border: none;
   border-radius: 5px;
@@ -47,5 +47,5 @@ h1 {
 }
 
 #extraction-button:hover {
-  background-color: #c7bd4d;
+  background-color: silver;
 }
