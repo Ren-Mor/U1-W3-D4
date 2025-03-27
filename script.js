@@ -6,8 +6,7 @@ function tableMaker() {
   for (let i = 1; i <= 90; i++) {
     const tD = document.createElement("div");
     tD.classList.add("cells");
-    tD.textContent = i;
-    tD.dataset.numero = i;
+    tD.textContent = i; // Il numero è memorizzato direttamente come contenuto della cella
 
     tableBlock.appendChild(tD);
   }
@@ -32,7 +31,8 @@ function getCell(num) {
   const tDivs = document.querySelectorAll(".cells");
 
   for (let i = 0; i < tDivs.length; i++) {
-    if (parseInt(tDivs[i].dataset.numero) === num) {
+    // Confronta il numero estratto con il contenuto testuale della cella
+    if (parseInt(tDivs[i].textContent) === num) {
       tDivs[i].classList.add("inEvidenza");
     }
   }
