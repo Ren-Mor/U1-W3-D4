@@ -22,7 +22,7 @@ h1 {
 .cells {
   width: 5%;
   display: inline-block;
-  margin: px;
+  margin: 1px;
   padding: 10px;
   background-color: lightgray;
   border: 1px solid black;
