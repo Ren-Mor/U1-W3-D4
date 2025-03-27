@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+body {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  background-image: url(assets/Bingo.avif);
+  background-size: cover;
+  background-position: center;
+  background-color: (250, 250, 250, 0.8);
+}
+
+h1 {
+  color: black;
+  font-size: 3em;
+}
+
+#table-block {
+  margin: 25px auto;
+  width: 90%;
+  max-width: 70%;
+  overflow: hidden;
+}
+
+.cells {
+  width: 25%;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  background-color: lightgray;
+  border: 1px solid black;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.cells.inEvidenza {
+  background-color: #ca361c;
+  color: white;
+}
+
+#extraction-button {
+  padding: 15px 25px;
+  font-size: 1.2em;
+  background-color: #ca361c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#extraction-button:hover {
+  background-color: #c7bd4d;
+}
