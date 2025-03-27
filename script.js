@@ -1,5 +1,5 @@
 const appNums = [];
-let availNums = Array.from({ length: 90 }, (_, i) => i + 1);
+const availNums = Array.from({ length: 90 }, (_, i) => i + 1);
 
 function tableMaker() {
   const tableBlock = document.getElementById("table-block");
