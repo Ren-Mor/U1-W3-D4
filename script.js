@@ -1,5 +1,5 @@
 const appNums = [];
-let availableNumbers = Array.from({ length: 90 }, (_, i) => i + 1);
+let availNums = Array.from({ length: 90 }, (_, i) => i + 1);
 
 function tableMaker() {
   const tableBlock = document.getElementById("table-block");
@@ -14,13 +14,13 @@ function tableMaker() {
 }
 
 function getNum() {
-  if (availableNumbers.length === 0) {
+  if (availNums.length === 0) {
     alert("Hai estratto tutti i numeri!");
     return;
   }
 
-  const randomIndex = Math.floor(Math.random() * availableNumbers.length);
-  const numRandom = availableNumbers.splice(randomIndex, 1)[0];
+  const randomIndex = Math.floor(Math.random() * availNums.length);
+  const numRandom = availNums.splice(randomIndex, 1)[0];
 
   appNums.push(numRandom);
   getCell(numRandom);
