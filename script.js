@@ -19,8 +19,8 @@ function getNum() {
     return;
   }
 
-  const randomIndex = Math.floor(Math.random() * availNums.length);
-  const numRandom = availNums.splice(randomIndex, 1)[0];
+  const randInd = Math.floor(Math.random() * availNums.length);
+  const numRandom = availNums.splice(randInd, 1)[0];
 
   appNums.push(numRandom);
   getCell(numRandom);
