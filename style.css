@@ -31,7 +31,7 @@ h1 {
   cursor: pointer;
 }
 
-.cells.inEvidenza {
+.inEvidenza {
   background-color: #ca361c;
   color: white;
 }
